@@ -71,7 +71,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
 
         binding.btnSubmitRental.setOnClickListener {
             val applicantName = binding.etApplicantName.text.toString().trim()
-            val studentId = binding.etStudentId.text.toString().trim()
+            val userId = binding.etUserId.text.toString().trim()
             val purpose = binding.etPurpose.text.toString().trim()
 
             if (applicantName.isEmpty()) {
@@ -80,9 +80,9 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
                 return@setOnClickListener
             }
 
-            if (studentId.isEmpty()) {
-                binding.etStudentId.error = getString(R.string.enter_student_id)
-                binding.etStudentId.requestFocus()
+            if (userId.isEmpty()) {
+                binding.etUserId.error = getString(R.string.enter_user_id)
+                binding.etUserId.requestFocus()
                 return@setOnClickListener
             }
 
@@ -97,7 +97,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
             val bundle = Bundle().apply {
                 putInt(NavKeys.EQUIPMENT_ID, equipment.id)
                 putString(NavKeys.APPLICANT_NAME, applicantName)
-                putString(NavKeys.STUDENT_ID, studentId)
+                putString(NavKeys.USER_LOGIN_ID, userId)
                 putString(NavKeys.PURPOSE, purpose)
                 putInt(NavKeys.RENTAL_DAYS, rentalDays)
             }

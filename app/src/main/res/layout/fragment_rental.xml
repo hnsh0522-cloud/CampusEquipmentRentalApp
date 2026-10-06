@@ -68,10 +68,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:hint="@string/student_id">
+            android:hint="@string/user_id">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/et_student_id"
+                android:id="@+id/et_user_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"

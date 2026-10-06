@@ -76,7 +76,7 @@
                     android:textSize="15sp" />
 
                 <TextView
-                    android:id="@+id/tv_complete_student_id"
+                    android:id="@+id/tv_complete_user_id"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="9dp"
