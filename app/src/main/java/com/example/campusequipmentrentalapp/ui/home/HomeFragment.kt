@@ -24,7 +24,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
         _binding = FragmentHomeBinding.bind(view)
 
-        binding.tvLoginUser.text = "${UserSession.currentUser.name}님 반갑습니다."
+        binding.tvLoginUser.text = "${UserSession.currentUser?.name}님 반갑습니다."
 
         binding.btnViewEquipment.setOnClickListener {
             findNavController().navigate(
