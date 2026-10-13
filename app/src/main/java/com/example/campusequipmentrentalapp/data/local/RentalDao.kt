@@ -10,13 +10,13 @@ import androidx.room.Query
 interface RentalDao {
 
     @Insert
-    fun insert(rentalEntity: RentalEntity): Long
+    suspend fun insert(rentalEntity: RentalEntity): Long
 
     @Query("SELECT * FROM rentals ORDER BY id DESC")
-    fun getAll(): List<RentalEntity>
+    suspend fun getAll(): List<RentalEntity>
 
     @Query("SELECT * FROM rentals WHERE userId =:userId")
-    fun getByUserId(userId: Int): List<RentalEntity>?
+    suspend fun getByUserId(userId: String): List<RentalEntity>?
 
 
 

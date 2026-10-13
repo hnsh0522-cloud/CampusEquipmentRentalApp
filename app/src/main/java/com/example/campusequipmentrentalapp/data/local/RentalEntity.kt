@@ -17,7 +17,7 @@ data class RentalEntity (
     val equipmentId: Int,
 
     // 신청시 사용자 번호
-    val userId: Int,
+    val userId: String,
 
     //대여 기간
     val rentalDays: Int,
