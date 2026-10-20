@@ -22,7 +22,13 @@ class UserRepository {
             "assistant01",
             "이조교",
             "컴퓨터소프트웨어학과",
-            UserRole.ASSISTANT)
+            UserRole.ASSISTANT),
+
+        User(4,
+            "20260011",
+            "홍길동",
+            "컴퓨터소프트웨어학과",
+            UserRole.STUDENT)
 
     )
 
