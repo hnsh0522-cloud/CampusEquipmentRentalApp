@@ -66,7 +66,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
 
         binding.tvRentalUser.text = """
                                         신청자: ${currentUser?.name}
-                                        사용자 ID: ${currentUser?.loginId}
+                                        사용자 ID: ${currentUser?.userId}
                                         구분 : ${currentUser?.role}
                                         학과 : ${currentUser?.department}
         """.trimMargin()
@@ -92,7 +92,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
         binding.btnSubmitRental.setOnClickListener {
 
             val applicantName = currentUser?.name
-            val userId = currentUser?.loginId
+            val userId = currentUser?.userId
             val purpose = binding.etPurpose.text.toString().trim()
 
             if(applicantName == ""){
@@ -112,7 +112,7 @@ class RentalFragment : Fragment(R.layout.fragment_rental) {
             val rentalDao = database.rentalDao()
             val rentalEntity = RentalEntity(
                 equipmentId = equipment.id,
-                userId = currentUser?.loginId ?: "",
+                userId = currentUser?.userId ?: "",
                 rentalDays = rentalDays,
                 purpose = purpose,
                 status = "대여중"
